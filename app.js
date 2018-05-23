@@ -3,9 +3,7 @@ const bodyParser = require("body-parser");
 const knex = require('./database-connection');
 const app = express();
 const coffees = require("./routes/coffees");
-const morgan = require('morgan');
 
-app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 app.use("/coffees", coffees);
